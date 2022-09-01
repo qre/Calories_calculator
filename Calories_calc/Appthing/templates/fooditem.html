@@ -1,0 +1,152 @@
+{% extends 'main.html' %}
+{% load static%}
+
+{% block content %}
+    <div class="flex-box-row">
+        <br>
+        <br>
+        <h5 id="heading">bread, cereal</h5>
+        <h7>Total options:{{bcnt}}</h7>
+            <a class="btn btn-primary  btn-sm btn-block" href="{% url 'createfooditem' %}">Add more options</a>
+            <table class="table table-sm">
+                <tr>
+                    <th>Name</th>
+                    <th>Carbs</th>
+                    <th>Fats</th>
+                    <th>Protein</th>
+                    <th>Calories</th>
+                    <th>Description</th>
+                    
+                </tr>
+               {% for items in bread %}
+                <tr>
+                    <td>{{items.name}} </td>
+                    <td>{{items.carbohydrate}} </td>
+                    <td>{{items.fats}} </td>
+                    <td>{{items.protein}} </td>
+                    <td>{{items.calories}} </td>
+                    <td>{{items.description}} </td>
+                    </tr>
+                    
+                {% endfor %}
+            </table>
+    </div>
+    <br>
+<!---------------------------->
+    <div class="flex-box-row">
+        <h5 id="heading">meat, fish</h5>
+        <h7>Total options:{{lcnt}}</h7>
+        
+            <a class="btn btn-primary  btn-sm btn-block" href="{% url 'createfooditem' %}">Add more options</a>
+            <table class="table table-sm">
+                <tr>
+                    <th>Name</th>
+                    <th>Carbs</th>
+                    <th>Fats</th>
+                    <th>Protein</th>
+                    <th>Calories</th>
+                    <th>Description</th>
+                    
+                </tr>
+               {% for items in meat %}
+                <tr>
+                    <td>{{items.name}} </td>
+                    <td>{{items.carbohydrate}} </td>
+                    <td>{{items.fats}} </td>
+                    <td>{{items.protein}} </td>
+                    <td>{{items.calories}} </td>
+                    <td>{{items.description}} </td>
+                    </tr>
+                    
+                {% endfor %}
+            </table>
+       
+    </div>
+    <br>
+<!------------------------------------------->
+    <div class="flex-box-row">
+        <h5 id="heading">fruits, vegetables</h5>
+        <h7>Total options:{{scnt}}</h7>
+            <a class="btn btn-primary  btn-sm btn-block" href="{% url 'createfooditem' %}">Add more options</a>
+            <table class="table table-sm">
+                <tr>
+                    <th>Name</th>
+                    <th>Carbs</th>
+                    <th>Fats</th>
+                    <th>Protein</th>
+                    <th>Calories</th>
+                    <th>Description</th>
+                    
+                </tr>
+               {% for items in fruits %}
+                <tr>
+                    <td>{{items.name}} </td>
+                    <td>{{items.carbohydrate}} </td>
+                    <td>{{items.fats}} </td>
+                    <td>{{items.protein}} </td>
+                    <td>{{items.calories}} </td>
+                    <td>{{items.description}} </td>
+                    </tr>
+                    
+                {% endfor %}
+            </table>
+    </div>
+    <br>
+<!-------------------------------------->
+    <div class="flex-box-row">
+        <h5 id="heading">milk, dairy</h5>
+        <h7>Total options:{{dcnt}}</h7>
+            <a class="btn btn-primary  btn-sm btn-block" href="{% url 'createfooditem' %}">Add more options</a>
+            <table class="table table-sm">
+                <tr>
+                    <th>Name</th>
+                    <th>Carbs</th>
+                    <th>Fats</th>
+                    <th>Protein</th>
+                    <th>Calories</th>
+                    <th>Description</th>
+                </tr>
+               {% for items in milk %}
+                <tr>
+                    <td>{{items.name}} </td>
+                    <td>{{items.carbohydrate}} </td>
+                    <td>{{items.fats}} </td>
+                    <td>{{items.protein}} </td>
+                    <td>{{items.calories}} </td>
+                    <td>{{items.description}} </td>
+                    </tr>
+                    
+                {% endfor %}
+            </table>
+    </div>
+    <br>
+<!------------------------------------------->
+    <div class="flex-box-row">
+        <h5 id="heading">fats, sugars</h5>
+        <h7>Total options:{{scnt}}</h7>
+            <a class="btn btn-primary  btn-sm btn-block" href="{% url 'createfooditem' %}">Add more options</a>
+            <table class="table table-sm">
+                <tr>
+                    <th>Name</th>
+                    <th>Carbs</th>
+                    <th>Fats</th>
+                    <th>Protein</th>
+                    <th>Calories</th>
+                    <th>Description</th>
+                </tr>
+            {% for items in fats %}
+                <tr>
+                    <td>{{items.name}} </td>
+                    <td>{{items.carbohydrate}} </td>
+                    <td>{{items.fats}} </td>
+                    <td>{{items.protein}} </td>
+                    <td>{{items.calories}} </td>
+                    <td>{{items.description}} </td>
+                    </tr>
+                    
+                {% endfor %}
+            </table>
+    </div>
+    <br>
+</div>
+{% endblock %}
