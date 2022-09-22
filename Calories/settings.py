@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$hsm^&ep%hlak@6m24$(m+p2i)uxtcnb9&-7)j9++h(#&*rsko'
+SECRET_KEY = '#####'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -85,9 +85,9 @@ WSGI_APPLICATION = 'Calories.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ebdb',
-        'USER': 'Basedowner',
-        'PASSWORD': 'TestDBpwd69',
+        'NAME': '##',
+        'USER': '##',
+        'PASSWORD': '##',
         'HOST': 'awseb-e-63zzpsgadv-stack-awsebrdsdatabase-4y65pwqwnfzd.c9upnp5jsp0u.eu-central-1.rds.amazonaws.com',
         'PORT': '5432',
     }
@@ -158,8 +158,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #E-mail config:
 EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST='####'
 EMAIL_PORT=587
 EMAIL_USE_TLS=True
-EMAIL_HOST_USER='test123@test.com' #type your email here
-EMAIL_HOST_PASSWORD='Test' #type your password here
+EMAIL_HOST_USER='###'
+EMAIL_HOST_PASSWORD='##'
