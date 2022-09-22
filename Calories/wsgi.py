@@ -18,8 +18,8 @@ https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/
 import os
 import sys    
 
-sys.path.insert(0, '/opt/python/current/app')
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings")
+#sys.path.insert(0, '/opt/python/current/app')
+os.environ["DJANGO_SETTINGS_MODULE"] = "Calories.settings"
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()

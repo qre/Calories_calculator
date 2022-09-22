@@ -30,7 +30,7 @@ def home(request):
     return render(request,'main.html',context)
 
 @login_required(login_url='login')
-#@allowed_users(allowed_roles=['admin'])
+@allowed_users(allowed_roles=['admin'])
 def fooditem(request):
     bread=Category.objects.filter(name='bread, cereal')[0].fooditem_set.all()
     bcnt=bread.count()
@@ -100,7 +100,7 @@ def loginPage(request):
         user=authenticate(request,username=username,password=password)
         if user is not None:
             login(request,user)
-            return redirect('home')
+            return redirect('/user')
         else:
             messages.info(request,'username or password is invalid')
     return render(request,'login.html')
